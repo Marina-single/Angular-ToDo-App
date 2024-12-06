@@ -1,0 +1,10 @@
+<div class="task-list">
+  <div *ngFor="let task of tasks; let i = index">
+   <div class="task-item">
+     <span [class.done]="task.done">{{ task.name }}</span>
+     <button (click)="toggleTaskStatus( i )">
+       {{ task.done ? 'Cancel' : 'Done' }}
+     </button>
+   </div>
+  </div>
+</div>
