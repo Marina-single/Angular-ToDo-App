@@ -1,16 +1,20 @@
-<div class="task-list">
-  <div *ngFor="let task of tasks; let i = index">
-    <div class="task-item">
-      <div>
-        <h5 [class.done]="task.done">{{ task.name }}</h5>
-        <p class="description">{{ task.description }}</p>
+<div class="task-container">
+  <div class="container">
+    <div class="task-list">
+      <div *ngFor="let task of tasks; let i = index">
+        <div class="task-item">
+          <div>
+            <h5 [class.done]="task.done">{{ task.name }}</h5>
+            <p class="description">{{ task.description }}</p>
+          </div>
+          <button (click)="toggleTaskStatus( i )">
+            {{ task.done ? 'Cancel' : 'Done' }}
+          </button>
+        </div>
       </div>
-      <button (click)="toggleTaskStatus( i )" >
-        {{ task.done ? 'Cancel' : 'Done' }}
-      </button>
+      <h5 style="padding-left:70px; padding-top:30px;">New Task</h5>
+      <input class="new-task" type="text" placeholder=""/>
+      <input class="new-description" type="text" />
     </div>
   </div>
-
-
 </div>
-
