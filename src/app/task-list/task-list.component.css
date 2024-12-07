@@ -20,7 +20,8 @@
   font-size:20px;
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  background-color: white;
+
 }
 button{
   background-color:#082567;
@@ -33,4 +34,7 @@ button{
 .done {
   text-decoration: line-through;
   color: red;
+}
+.description {
+ font-size: 15px;
 }
